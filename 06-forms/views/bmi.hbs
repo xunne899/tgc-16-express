@@ -1,0 +1,31 @@
+{{#extends 'base'}}
+
+{{#block "content"}}
+<h1>Calculate your BMI</h1>
+<form method="POST">
+    <div>
+        <label>Height</label>
+        <!-- all your `input type = whatever` must have a name attribute -->
+        <input type="text" name="Height" class="form-control" />
+    </div>
+    <div>
+        <label>Weight</label>
+        <input type="text" name="Weight" class="form-control" />
+    </div>
+    {{!-- <div>
+        <label>Description</label>
+        <textarea name="text" class="form-control"></textarea>
+    </div> --}}
+
+   
+
+    <!-- the form must have a submit button
+         the submit button must nested with the <form> tag -->
+    <div>
+        <input type="submit" value="Submit" class="btn btn-primary mt-3" />
+    </div>
+
+</form>
+{{/block}}
+
+{{/extends}}

@@ -1,0 +1,73 @@
+{{#extends 'base'}}
+
+{{#block "content"}}
+<h1>Enter your food</h1>
+<form method="POST">
+    <div>
+        <label>Food Name:</label>
+        <!-- all your `input type = whatever` must have a name attribute -->
+        <input type="text" name="foodName" class="form-control" />
+    </div>
+    <div>
+        <label>Calories</label>
+        <input type="text" name="calories" class="form-control" />
+    </div>
+    <div>
+        <label>Description</label>
+        <textarea name="text" class="form-control"></textarea>
+    </div>
+
+    <div>
+        <label>Meal </label>
+        <div class='form-check form-check-inline'>
+            <div class="ms-4 d-inline-block">
+                <input type="radio" class="form-check-input" name="meal"
+                   value="breakfast" checked/>
+                <label class="form-check-label">Breakfast</label>
+            </div>
+            <div class="ms-4 d-inline-block">
+                <input type="radio" class="form-check-input" name="meal"
+                   value="lunch"/>
+                <label class="form-check-label">Lunch</label>
+            </div>
+            <div class="ms-4 d-inline-block">
+                <input type="radio" class="form-check-input" name="meal"
+                  value="dinner"/>
+                <label class="form-check-label">Dinner</label>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <label>Tags</label>
+        <input type="checkbox" value="healthy" name="tags"/>
+        <label>Healthy</label>
+        <input type="checkbox" value="organic" name="tags"/>
+        <label>Organic</label>
+        <input type="checkbox" value="vegan" name="tags"/>
+        <label>Vegan</label>
+  
+    </div>
+
+    <div>
+        <label>Cuisine</label>
+        <select class="form-control" name="cuisine">
+            <option value="chinese">Chinese</option>
+            <option value="indian">Indian</option>
+            <option value="malay">Malay</option>
+            <option value="western">Western</option>
+        </select>
+    </div>
+
+
+
+    <!-- the form must have a submit button
+         the submit button must nested with the <form> tag -->
+    <div>
+        <input type="submit" value="Add Food" class="btn btn-primary mt-3" />
+    </div>
+
+</form>
+{{/block}}
+
+{{/extends}}

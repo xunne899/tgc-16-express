@@ -1,0 +1,34 @@
+{{#extends "base"}}
+
+{{#block "content"}}
+<h1>My Favourite Fruits</h1>
+
+    <ul>
+    <!-- for (let f of fruits) -->
+    {{#each fruits}}
+    <!-- `this` will be each element 
+    from the fruit array consecutively -->
+        <li>{{this}}</li>
+    {{/each}}
+
+    </ul>
+
+    {{#if likesFruit}}
+    <div class="alert alert-success">
+        I like fruits
+    </div>
+    {{else}}
+    <div class="alert alert-danger">
+        I hate fruits
+    </div>
+    {{/if}}
+
+    {{#ifEquals age 33}}
+    <div>Time to be  carptener</div>
+    {{else}}
+    <div>Not time</div>
+    {{/ifEquals}}
+
+{{/block}}
+
+{{/extends}}
