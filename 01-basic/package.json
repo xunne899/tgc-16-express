@@ -1,7 +1,7 @@
 {
   "name": "01-basic",
   "version": "1.0.0",
-  "description": "",
+  "description": "1. Create a new directory      ```     mkdir 01-basic     cd 01-basic     ```",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.2"
-  }
+    "express": "^4.17.3"
+  },
+  "devDependencies": {}
 }
